@@ -8,6 +8,16 @@ Vue.config.productionTip = false
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.register('/serviceWorker.js').then(function (reg) {
       console.log('Successfully registered service worker', reg);
+      Notification.requestPermission(result => {
+        if (result === 'granted') {
+          navigator.serviceWorker.ready.then(registration => {
+            registration.showNotification('Vibration Sample', {
+              body: 'Buzz! Buzz!',
+              tag: 'vibration-sample'
+            });
+          });
+        }
+      });
 
   }).catch(function (err) {
       console.warn('Error whilst registering service worker', err);
