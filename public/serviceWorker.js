@@ -7,8 +7,8 @@ self.addEventListener('install', function (e) {
         caches.open(cacheName).then(function (cache) {
             return cache.addAll([
             './',
-            'dist/js',
-            'dist/css',
+            '/js',
+            '/css',
             './favicon.ico',
             '/manifest.json',
             '/js/chunk-vendors.js',
