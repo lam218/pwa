@@ -2,6 +2,9 @@
   <div>
     <nav-header />
     <todo-list list-name="My to-dos" />
+    <img
+      src="https://lp-cms-production.imgix.net/2019-06/28206231.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4"
+    />
   </div>
 </template>
 
@@ -12,7 +15,7 @@ export default {
   name: "App",
   components: {
     TodoList,
-    NavHeader
+    NavHeader,
   },
 };
 </script>
@@ -25,5 +28,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+img {
+  max-width: 100vw;
 }
 </style>

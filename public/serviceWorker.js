@@ -12,7 +12,8 @@ self.addEventListener('install', function (e) {
             '/manifest.json',
             '/js/chunk-vendors.js',
             '/img/logo.82b9c7a5.png',
-            '/sockjs-node/info'
+            'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css',
+            'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/webfonts/fa-solid-900.woff2'
             ]).then(function () {
                 self.skipWaiting();
             });
